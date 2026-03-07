@@ -40,7 +40,7 @@ const MasterProduct = sequelize.define('tbl_master_product', {
     allowNull: true
   },
   status: {
-    type: DataTypes.ENUM('low', 'avaible', 'unvaible'),
+    type: DataTypes.STRING(30),
     allowNull: true
   },
   remark: {
@@ -57,3 +57,4 @@ const MasterProduct = sequelize.define('tbl_master_product', {
 });
 
 module.exports = MasterProduct;
+
