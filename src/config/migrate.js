@@ -7,7 +7,7 @@ const migrate = async () => {
         console.log('✓ Database connection authenticated');
         
         // Sync all models with database
-        await sequelize.sync({ alter: false }); // when add column auto to alter: true
+        await sequelize.sync({ alter: true }); // when add column auto to alter: true
         console.log('✓ Database synchronized successfully');
         return true;
     } catch (error) {
@@ -15,5 +15,6 @@ const migrate = async () => {
         throw error;
     }
 }
+
 
 module.exports = migrate;
